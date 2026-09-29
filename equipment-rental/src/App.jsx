@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import './App.css';
 
 const initialEquipment = [
+=======
+import './App.css';
+
+const equipment = [
+>>>>>>> caa8b46a77c01facd418f904fea1bc292224daea
   { id: 1, name: 'Перфоратор Makita HR2470', category: 'Электроинструмент', pricePerDay: 350 },
   { id: 2, name: 'Бетономешалка 160л', category: 'Строительное', pricePerDay: 800 },
   { id: 3, name: 'Лобзик Bosch PST 700', category: 'Электроинструмент', pricePerDay: 250 },
@@ -9,6 +15,7 @@ const initialEquipment = [
   { id: 5, name: 'Отбойный молоток Makita HM1213C', category: 'Электроинструмент', pricePerDay: 900 },
   { id: 6, name: 'Строительные леса 2м', category: 'Оснастка', pricePerDay: 200 },
 ];
+<<<<<<< HEAD
 
 const emptyForm = { name: '', category: '', pricePerDay: '' };
 
@@ -79,20 +86,35 @@ setEditId(null);
             onChange={handleChange('name')}
             placeholder="Например: Перфоратор Makita"
           />
+=======
+
+function App() {
+  return (
+    <div className="app">
+      <form className="equipment-form">
+        <div className="form-field">
+          <label>Название</label>
+          <input type="text" />
+>>>>>>> caa8b46a77c01facd418f904fea1bc292224daea
         </div>
 
         <div className="form-field">
           <label>Категория</label>
+<<<<<<< HEAD
           <input
             type="text"
             value={form.category}
             onChange={handleChange('category')}
             placeholder="Например: Электроинструмент"
           />
+=======
+          <input type="text" />
+>>>>>>> caa8b46a77c01facd418f904fea1bc292224daea
         </div>
 
         <div className="form-field">
           <label>Цена за сутки</label>
+<<<<<<< HEAD
            <input
             type="number"
             min="0"
@@ -115,6 +137,18 @@ setEditId(null);
 
       <h1>Оборудование</h1>
 
+=======
+          <input type="text" />
+        </div>
+
+        <button type="button" className="btn-add">
+          Добавить Оборудование
+        </button>
+      </form>
+
+      <h1>Оборудование</h1>
+
+>>>>>>> caa8b46a77c01facd418f904fea1bc292224daea
       <table className="equipment-table">
         <thead>
           <tr>
@@ -122,7 +156,11 @@ setEditId(null);
             <th>Название</th>
             <th>Категория</th>
             <th>Цена за сутки</th>
+<<<<<<< HEAD
             <th>Действия</th>
+=======
+            <th>Удаление</th>
+>>>>>>> caa8b46a77c01facd418f904fea1bc292224daea
           </tr>
         </thead>
         <tbody>
@@ -133,21 +171,31 @@ setEditId(null);
               <td>{item.category}</td>
               <td>{item.pricePerDay} ₽</td>
               <td>
+<<<<<<< HEAD
                  <button type="button" className="btn-delete" onClick={() => handleDelete(item.id)}>
                   Удалить 
                 </button>
 
                 <button type="button" className="btn-edit" onClick={() => handleEdit(item)}>
+=======
+                <button type="button" className="btn-delete">
+                  Удалить
+                </button>
+                <button type="button" className="btn-add">
+>>>>>>> caa8b46a77c01facd418f904fea1bc292224daea
                   Изменить
                 </button>
               </td>
             </tr>
           ))}
+<<<<<<< HEAD
           {equipment.length === 0 && (
             <tr>
               <td colSpan={5}>Список пуст — добавьте оборудование через форму выше.</td>
             </tr>
           )}
+=======
+>>>>>>> caa8b46a77c01facd418f904fea1bc292224daea
         </tbody>
       </table>
     </div>
