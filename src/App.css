@@ -1,0 +1,191 @@
+.app {
+  flex: 1;
+  padding: 0 24px 40px;
+}
+
+/* ---------- Форма ---------- */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-field input {
+  font: inherit;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+/* ---------- Кнопки ---------- */
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn-delete {
+  color: #d33;
+  border-color: #d33;
+}
+
+.view-btn--active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Страница входа ---------- */
+.login-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.login-error {
+  color: #d33;
+}
+
+.login-hint {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  font-size: 14px;
+}
+
+.login-hint ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+/* ---------- Страница оборудования ---------- */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.equipment-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: end;
+  padding: 20px 0;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+}
+
+.view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 16px;
+}
+
+/* ---------- Таблица ---------- */
+.equipment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.equipment-table th,
+.equipment-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Дополнительное задание: фон чётных строк темнее, чем нечётных */
+.equipment-table tbody tr:nth-child(even) {
+  background: var(--bg-alt);
+}
+
+.table-actions,
+.equipment-card__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.table-empty td {
+  text-align: center;
+}
+
+/* ---------- Карточки ---------- */
+.equipment-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.equipment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.equipment-card__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.equipment-card__title,
+.equipment-card__price {
+  margin: 0;
+}
+
+.equipment-card__actions {
+  margin-top: auto;
+}
+
+.loading,
+.empty-state {
+  padding: 20px 0;
+}
+
+@media (max-width: 800px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .equipment-form {
+    grid-template-columns: 1fr;
+  }
+}
